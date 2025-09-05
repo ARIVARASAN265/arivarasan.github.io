@@ -4,18 +4,11 @@
     box-sizing: border-box;
 } */
 
-body{
-    font-family: 'Raleway', sans-serif;
-    /* background-color: #3D5656; */
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(
-        to right,
-        paleturquoise 0%,
-        paleturquoise 50%,
-        pink 50%,
-        pink 100%
-      );
+body {
+  font-family: 'Raleway', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
 }
 
 a {
@@ -34,15 +27,22 @@ li {
     color: #3A4F7A;
     /* color: white; */
     color: #2B3467;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+    border-radius: 0 0 18px 18px;
 }
 
 .nav-links a{
     /* color: white; */
-    color: #2D033B;
+    color: #2B3467;
 }
 
 .logo{
-    font-size: 40px;
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #2B3467;
+    text-shadow: 1px 1px 8px #cfdef3;
 }
 
 .menu{
@@ -52,14 +52,26 @@ li {
     color: #3A4F7A;
 }
 
-.menu li:hover {
-    text-decoration: underline;
-    transition: 0.5s ease-out;
+.menu a, .menu li a {
+  color: #2B3467;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.menu a:hover, .menu li a:hover {
+  color: #3A4F7A;
 }
 
 .menu i{
-    font-size: 28px;
-    padding: 0 5px;
+    font-size: 1.5em;
+    color: #3A4F7A;
+    transition: color 0.3s;
+}
+.menu i:hover {
+  color: #22A39F;
+}
+
+.menu-toggle {
+  color: #2B3467;
 }
 
 .containe{
@@ -97,35 +109,48 @@ img{
 }
 
 .subtitle-mainhead{
-    color: #EB455F;
+    color: #22A39F;
+    font-weight: 800;
 }
 
 .subtitle-intro{
-    font-size: 50px;
+    font-size: 2.2em;
+    color: #2B3467;
 }
 
 .subtitle-passs{
-    font-size: 27px;
+    font-size: 1.1em;
+    color: #3A4F7A;
 }
 
 .details{
     margin-top: 20px;
-    background-color:#22A39F; 
-    /* background-color: #FF597B; */
-    color: white !important;
-    text-decoration: none;
+    background: linear-gradient(90deg, #22A39F 0%, #3A4F7A 100%);
+    color: #fff !important;
     border: none;
-    padding: 12px 17px;
-    border-radius: 9px;
+    padding: 14px 28px;
+    border-radius: 30px;
     display: inline-block;
-    font-size: 18px;
+    font-size: 1.2em;
+    font-weight: 700;
+    box-shadow: 0 4px 16px rgba(44,62,80,0.10);
+    transition: background 0.3s, transform 0.2s;
     cursor: pointer;
-    font-weight: 600;
 }
 
 .details:hover{
-    background-color: burlywood;
-    color: white;
+    background: linear-gradient(90deg, #3A4F7A 0%, #22A39F 100%);
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.details a {
+  position: relative;
+  z-index: 1;
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .subtitle button{
@@ -141,6 +166,11 @@ img{
 .sectiom{
     width: 100%;
     min-height: 100vh;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.08);
+    margin: 30px auto;
+    padding: 30px 20px;
 }
 
 .container{
@@ -175,9 +205,9 @@ img{
 }
 
 .content p{
-    margin-top: 30px;
-    font-size: 24px;
-    line-height: 44px;
+    color: #3A4F7A;
+    font-size: 1.1em;
+    line-height: 1.7;
 }
 
 .content-sectiom .social{
@@ -187,10 +217,26 @@ img{
 .content-sectiom .social i{
     font-size: 30px;
     padding: 0 10px;
+    background: #e0eafc;
+    border-radius: 50%;
+    padding: 10px;
+    color: #3A4F7A !important;
+    margin: 0 8px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.social i:hover {
+  background: #22A39F;
+  color: #fff !important;
+  transform: scale(1.1);
 }
 
 .foot-down{
-    background-color: #97DECE;
+    background: #cfdef3;
+    color: #2B3467;
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -2px 12px rgba(44,62,80,0.08);
 }
 
 .foot{
@@ -198,7 +244,157 @@ img{
     text-align: center;
 }
 
+.foot h4 {
+  color: #3A4F7A;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+
 .foot i{
-    font-size: 35px;
-    padding: 5px;
+    color: #22A39F !important;
+}
+
+.menu-toggle {
+  display: none;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    background: linear-gradient(
+      to bottom,
+      paleturquoise 0%,
+      pink 100%
+    );
+  }
+  .navbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+  }
+  .logo {
+    font-size: 1.5em;
+    margin-bottom: 0;
+  }
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #2B3467;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 0.5em;
+    width: 100%;
+    text-align: center;
+  }
+  .nav-links a {
+    font-size: 1em;
+    padding: 10px 0;
+    display: block;
+  }
+}
+@media (max-width: 900px) {
+  .containe {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .photo img {
+    width: 80vw;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 20px;
+    max-width: 300px;
+  }
+  .subtitle {
+    margin-left: 0;
+    padding: 20px 10px;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .subtitle-intro {
+    font-size: 2em;
+  }
+  .subtitle-passs {
+    font-size: 1em;
+  }
+  .details {
+    font-size: 1em;
+    padding: 10px 15px;
+  }
+  .about-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .content-sectiom, .image-sectiom {
+    float: none;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .image-sectiom img {
+    width: 80vw;
+    max-width: 300px;
+    height: auto;
+  }
+}
+
+/* Fade-in animation for main sections */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.main, .sectiom, .navbar, .foot-down {
+  animation: fadeInUp 1s ease;
+}
+
+/* Button hover transition */
+.details {
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+.details:hover {
+  box-shadow: 0 8px 24px rgba(44,62,80,0.18);
+}
+
+/* Image hover effect */
+.photo img, .image-sectiom img {
+  transition: transform 0.4s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s;
+}
+.photo img:hover, .image-sectiom img:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+}
+
+/* Social icon hover effect */
+.social i {
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+.social i:hover {
+  box-shadow: 0 4px 16px rgba(34,163,159,0.18);
 }
